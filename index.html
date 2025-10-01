@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prakruthi Shangrila - Premium Residential Project | Tirupati</title>
+  <meta name="description" content="Discover Prakruthi Shangrila, a premium residential project in Tirupati offering gated community living, modern amenities, and perfect connectivity. Book your dream home today.">
+  <meta name="keywords" content="Prakruthi Shangrila, Tirupati real estate, residential apartments, gated community, luxury homes, Andhra Pradesh properties">
+
+  <!-- OG -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prakruthi Shangrila - Premium Residential Project | Tirupati">
+  <meta property="og:description" content="Discover Prakruthi Shangrila, a premium residential project in Tirupati offering gated community living, modern amenities, and perfect connectivity.">
+  <meta property="og:url" content="https://prakruthishangrila.com">
+  <meta property="og:image" content="/images/img_krofyhk4h983y3r.png">
+
+  <!-- Styles & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      --brand:#1c3170;
+      --gold:#d2aa5c;
+      --ink:#2a2a2a;
+      --muted:#737373;
+      --card:#fff;
+      --ring:rgba(0,0,0,.08);
+      --shadow:0 8px 28px rgba(0,0,0,.10);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Plus Jakarta Sans", "Poppins", "Inter", sans-serif;
+      color:#333; background:#fff; line-height:1.6; overflow-x:hidden;
+    }
+    img{max-width:100%; height:auto; display:block}
+
+    /* Header */
+    .header{position:fixed; inset:0 0 auto 0; z-index:1000; background:rgba(255,255,255,.95); backdrop-filter:blur(10px); border-bottom:1px solid rgba(0,0,0,.08)}
+    .header .container{padding:0 16px}
+    .header-content{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; position:relative}
+    .logo{width:80px; height:80px}
+    .contact-btn{background:var(--gold);color:#fff;padding:6px 14px;font-size:13px;font-weight:600;border-radius:18px;display:flex;align-items:center;gap:8px;justify-content:center;transition:background 0.3s, transform 0.2s;text-decoration:none;}
+.contact-btn:hover{background:#d4af37;transform:scale(1.05);}
+@media(max-width:480px){.contact-btn{padding:8px 12px;font-size:12px;gap:6px;border-radius:16px;}}
+
+  
+
+    .nav-menu{display:none}
+    .nav-link{position:relative; font:600 15px Montserrat, sans-serif; color:var(--brand); text-decoration:none}
+    .nav-link::after{content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .2s}
+    .nav-link:hover{color:var(--gold)} .nav-link:hover::after{transform:scaleX(1)}
+    .menu-toggle{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:10px; background:#fff; color:var(--gold); border:1px solid var(--gold)}
+    .menu-toggle:hover{background:var(--gold); color:#fff}
+    .mobile-menu{position:absolute; top:100%; left:0; right:0; margin-top:8px; background:#fff; border:1px solid var(--ring); border-radius:12px; box-shadow:0 12px 24px rgba(0,0,0,.10); padding:12px; display:grid; gap:6px; transform-origin:top; transform:scaleY(.98); opacity:0; pointer-events:none; transition:opacity .18s, transform .18s; z-index:999}
+    .mobile-menu.open{opacity:1; transform:scaleY(1); pointer-events:auto}
+    .mobile-link{display:block; padding:12px 14px; border-radius:10px; font:600 15px Montserrat, sans-serif; color:var(--brand); text-decoration:none}
+    .mobile-link:hover{background:#f6f7fb}
+    @media(min-width:768px){.menu-toggle{display:none}.nav-menu{display:flex; gap:36px; align-items:center}}
+
+    /* Main spacing (offset header) */
+    main{padding-top:104px}
+
+    /* Hero (Ken Burns crossfade) */
+    .hero{position:relative; height:100vh; color:#fff; isolation:isolate}
+    .hero__content{
+      position:absolute; left:5%; top:60%; transform:translateY(-50%); z-index:3;
+      width:clamp(320px, 42vw, 560px); min-height:220px; padding:18px 24px;
+      background:rgb(135 206 235 / .10); color:#fff; border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.35); box-shadow:var(--shadow);
+      display:flex; flex-direction:column; gap:8px
+    }
+    .hero__content p{margin:0; font-weight:500; font-size:18px}
+    .hero__bg{position:absolute; inset:0; z-index:1}
+    .hero__img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; animation:ken 12s ease-in-out infinite}
+    .hero__img--one{animation-name:ken, fadeOne}
+    .hero__img--two{animation-name:ken, fadeTwo}
+    .hero__overlay{position:absolute; inset:0; z-index:2; pointer-events:none; background:linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 50%); opacity:.6}
+    @keyframes ken{0%{transform:scale(1)}100%{transform:scale(1.12)}}
+    @keyframes fadeOne{0%,45%{opacity:1}50%,95%{opacity:0}100%{opacity:1}}
+    @keyframes fadeTwo{0%,45%{opacity:0}50%,95%{opacity:1}100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){.hero__img{animation:none; opacity:1}.hero__img--two{display:none}}
+    @media (max-width:620px){
+      .hero{display:grid; place-items:center; padding:12px; height:auto; min-height:100svh}
+      .hero__content{position:static; transform:none; width:fit-content; max-width:calc(100vw - 24px)}
+      .hero__content p{font-size:16px}
+    }
+
+    /* Sections */
+    .section-title{font-weight:700; text-align:center; color:#000; margin:16px 0 24px}
+    .section-title.large{font-size:42px}
+    .section{padding:10px 0}
+
+    /* Blocks gallery */
+    .project-gallery{display:grid; grid-template-columns:repeat(6,1fr); gap:18px}
+    .gallery-item{aspect-ratio:16/9; border-radius:12px; overflow:hidden; box-shadow:0 6px 20px rgb(0 0 0 / .12); cursor:pointer}
+    .gallery-item>img{width:100%; height:100%; object-fit:cover}
+    .project-gallery .gallery-item:nth-child(1),
+    .project-gallery .gallery-item:nth-child(2){grid-column:span 3}
+    .project-gallery .gallery-item:nth-child(n+3){grid-column:span 2}
+    @media (max-width:1024px){.project-gallery{grid-template-columns:repeat(2,1fr)} .project-gallery .gallery-item{grid-column:span 1 !important}}
+    @media (max-width:620px){.project-gallery{grid-template-columns:1fr}}
+
+    /* Reusable lightbox */
+    .lightbox{display:none; position:fixed; inset:0; z-index:9999; padding:40px; background:rgba(0,0,0,.9); text-align:center}
+    .lightbox.open{display:block}
+    .lightbox-content{max-width:90%; max-height:80vh; margin-top:40px; border-radius:8px}
+    .lightbox .close{position:absolute; top:15px; right:35px; color:#fff; font-size:40px; font-weight:700; cursor:pointer}
+
+    /* Amenities */
+    .amenities-box{border:2px solid #a62c2b; border-radius:16px; background:#fdfbf8; padding:20px; width:min(920px, 90%); margin:0 auto; box-shadow:0 6px 15px rgba(0,0,0,.05)}
+    .amenities-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px 30px}
+    .amenity{display:flex; align-items:center; gap:10px}
+    .amenity-icon{width:50px; height:50px; border-radius:50%; background:#fff; border:1.5px solid #a62c2b; padding:8px; object-fit:contain}
+    .amenity-text{margin:0; font:600 16px/1.35 Inter, system-ui, sans-serif; color:#2a2a2a}
+    @media(max-width:1200px){.amenities-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:900px){.amenities-grid{grid-template-columns:repeat(2,1fr)} .amenity-icon{width:45px;height:45px}}
+    @media(max-width:560px){.amenities-grid{grid-template-columns:1fr} .amenity-text{font-size:13px}}
+
+    /* Image gallery (below amenities) */
+    .gallery-container{border:1px solid #222; border-radius:8px; padding:18px; background:#fff; margin-top:29px}
+    .gallery-grid{display:grid; gap:16px}
+    .gallery-column{display:flex; flex-direction:column; gap:12px}
+    .gallery-image{border-radius:6px; transition:transform .25s; aspect-ratio: 1 / 1;}
+    .gallery-image:hover{transform:scale(1.02)}
+    @media (min-width:640px){.gallery-grid{grid-template-columns:repeat(2,1fr); gap:24px}}
+    @media (min-width:992px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+
+    /* Floor plans (Bootstrap carousel) */
+    .floor-plan-image{max-width:95%; height:auto; display:block; margin:0 auto; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,.08); object-fit:contain}
+    @media (min-width:1200px){.floor-plan-image{max-width:55%}}
+    @media (max-width:992px){.floor-plan-image{max-width:90%}}
+    @media (max-width:768px){.floor-plan-image{max-width:85%}}
+    @media (max-width:576px){.floor-plan-image{max-width:95%}}
+
+    :root { --gold:#C8A240; }
+
+/* Optional outer padding & max width */
+
+.location-section{padding:24px 16px;}
+.location-content{display:flex;flex-direction:column;gap:24px;background:#fff;border-radius:8px;padding:24px 16px;box-shadow:0 1px 2px rgba(0,0,0,.12);max-width:auto;margin:0 auto;}
+@media(min-width:640px){.location-content{flex-direction:row;gap:48px;padding:28px;align-items:stretch;}}
+@media(max-width:480px){.location-content{flex-direction:column;gap:16px;padding:16px;}}
+
+
+
+
+
+
+/* Left + right columns */
+.location-details { flex:1 1 0; min-width:0; }
+.location-map {
+  /* Right column gets a nice responsive width on larger screens */
+  flex:0 1 clamp(320px, 45vw, 640px);
+  display:flex;           /* lets the map fill available height */
+}
+
+/* Typography & list */
+.location-title { font:700 28px Inter, sans-serif; color:#000; margin-bottom:16px; }
+.location-list { list-style:none; padding:0; margin:0; }
+.location-list li { display:flex; align-items:center; gap:12px; margin-bottom:12px; font-size:18px; color:#333; font-weight:500; }
+.location-list i { color:var(--gold); min-width:24px; text-align:center; font-size:22px; }
+
+/* Map box */
+.map-container{
+  width:100%;
+  /* Use aspect-ratio for smooth scaling; keeps a good height on any screen */
+  aspect-ratio: 16 / 11;
+  min-height:320px;                 /* phones */
+  border-radius:8px; overflow:hidden;
+  border:1px solid #e5e7eb; background:#f8fafc;
+}
+/* Old-browser fallback for aspect-ratio */
+@supports not (aspect-ratio: 16 / 11) {
+  .map-container { position:relative; padding-top:62.5%; }  /* ~16:10 */
+  .map-iframe { position:absolute; inset:0; }
+}
+
+/* Iframe always fills its box (fixes 200%/overflow issues) */
+.map-iframe{
+  width:100%; height:100%;
+  border:0; display:block;
+}
+
+/* Make the map taller on tablets/desktop and match left column height */
+@media (min-width:640px){
+  .location-details, .location-map { display:flex; flex-direction:column; }
+  .map-container { flex:1; min-height:420px; }
+}
+
+/* Small phones: slightly smaller text for comfort */
+@media (max-width:399px){
+  .location-title { font-size:24px; }
+  .location-list li { font-size:16px; }
+}
+
+
+    /* About */
+    .about-video{margin-bottom:16px}
+    .about-text{display:block;margin:16px 0 8px 0;padding:0 20px;color:#666;font-size:20px;font-weight:bolder;text-align:justify;line-height:1.5;}
+
+    .about-text strong { color: #C8A240; }
+
+
+    .about-btn{background:var(--gold); color:#fff; padding:12px 28px; font-size:16px; font-weight:600; text-transform:uppercase; border:none; border-radius:6px; box-shadow:0 1px 2px rgba(0,0,0,.25); margin:16px auto 0; display:block}
+
+    /* Footer */
+
+.footer{background:#fff;padding:40px 20px 16px;border-top:1px solid #e5e5e5;}
+.footer-content{display:grid;gap:32px;grid-template-columns:repeat(4,1fr);max-width:1200px;margin:0 auto;}
+.footer-section-title{font-weight:700;color:#2a2a2a;margin-bottom:8px;}
+.footer-link{display:block;margin:6px 0;color:#666;text-decoration:none;font-size:15px;transition:color 0.3s;}
+.footer-link:hover{color:#d4af37;}
+.footer-logo{max-width:160px;margin:0 auto;border-radius:8px;}
+.contact-item{display:flex;align-items:center;gap:10px;font-size:15px;color:#666;margin-bottom:8px;}
+.contact-item i{color:#d4af37;font-size:18px;}
+.footer-bottom{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border-top:1px solid #e5e5e5;padding-top:16px;margin-top:24px;}
+.social-links{display:flex;gap:18px;align-items:center;}
+.social-links a i{font-size:1.5em;}
+
+/* Responsive Footer */
+@media(max-width:1024px){.footer-content{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.footer-content{grid-template-columns:1fr;text-align:center;}.contact-item{justify-content:center;}.footer-bottom{flex-direction:column;text-align:center;}.social-links{justify-content:center;}}
+@media(max-width:480px){.footer{padding:30px 15px 16px;}.footer-section-title{font-size:16px;}.footer-link{font-size:14px;}.contact-item{font-size:14px;}}
+
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="#top" aria-label="Go to top">
+          <img src="images/img_nz0ijwfobrm4lyb.png" alt="Prakruthi Shangrila" class="logo">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <nav class="nav-menu" role="navigation" aria-label="Primary">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#blocks" class="nav-link">Blocks</a>
+          <a href="#amenities" class="nav-link">Amenities</a>
+          <a href="#floor-plans" class="nav-link">Floor Plan</a>
+          <a href="#location" class="nav-link">Location</a>
+          <a href="#contact" class="nav-link">Contact Us</a>
+        </nav>
+
+        <div id="mobileMenu" class="mobile-menu" hidden>
+          <a href="#about" class="mobile-link">About</a>
+          <a href="#blocks" class="mobile-link">Blocks</a>
+          <a href="#amenities" class="mobile-link">Amenities</a>
+          <a href="#floor-plans" class="mobile-link">Floor Plan</a>
+          <a href="#location" class="mobile-link">Location</a>
+          <a href="#contact" class="mobile-link">Contact Us</a>
+        </div>
+
+        <a class="contact-btn" href="tel:+919010004039">
+          <i class="fa fa-phone" aria-hidden="true"></i> +91-9010004039
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="about" class="hero">
+      <div class="hero__content">
+        <p>Tirupati’s Largest RERA-Approved Gated Community</p>
+        <p>6 Acres of Lifestyle Living with 464 Exclusive Flats</p>
+        <p>Spacious 2, 3 &amp; 4 BHK Premium Residences</p>
+        <p>Basement + Ground + 8 Floors of Modern Design</p>
+        <p>30,000 Sq.ft. Clubhouse with Temple in the Premises</p>
+      </div>
+
+      <div class="hero__bg" aria-hidden="true">
+        <img class="hero__img hero__img--one" src="images/Hero_updatedimage(1).jpg" alt="">
+        <img class="hero__img hero__img--two" src="images/Hero_updatedimage(2).jpg" alt="">
+        <span class="hero__overlay"></span>
+      </div>
+    </section>
+
+    <!-- Blocks -->
+    <section id="blocks" class="section">
+      <h2 class="section-title large">Blocks</h2>
+      <div class="container">
+        <div class="project-gallery">
+          <figure class="gallery-item"><img src="images/A1.jpg" alt="Block A"></figure>
+          <figure class="gallery-item"><img src="images/B1.jpg" alt="Block B"></figure>
+          <figure class="gallery-item"><img src="images/C1.jpg" alt="Block C"></figure>
+          <figure class="gallery-item"><img src="images/D1.jpg" alt="Block D"></figure>
+          <figure class="gallery-item"><img src="images/E1.jpg" alt="Block E"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox (single instance) -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <span class="close" role="button" aria-label="Close viewer">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" alt="">
+      <div id="caption" class="text-white mt-2"></div>
+    </div>
+
+    <!-- Amenities + Gallery -->
+    <section id="amenities" class="section">
+      <div class="container">
+        <h2 class="section-title large">Best Amenities for You</h2>
+
+        <div class="amenities-box">
+          <div class="amenities-grid">
+            <article class="amenity"><img src="images/Gym-1.png" alt="AC Gymnasium" class="amenity-icon"><h3 class="amenity-text">AC Gymnasium</h3></article>
+            <article class="amenity"><img src="images/Indoor-Games-1.png" alt="Indoor Games" class="amenity-icon"><h3 class="amenity-text">Indoor Games</h3></article>
+            <article class="amenity"><img src="images/Medidate-1.png" alt="Meditate and Yoga" class="amenity-icon"><h3 class="amenity-text">Meditate &amp; Yoga</h3></article>
+            <article class="amenity"><img src="images/Free-Wifi-1.png" alt="Free Wi-Fi/Internet" class="amenity-icon"><h3 class="amenity-text">Free Wi-Fi/Internet</h3></article>
+            <article class="amenity"><img src="images/Chidren-Park-1.png" alt="Children Park" class="amenity-icon"><h3 class="amenity-text">Children Park</h3></article>
+            <article class="amenity"><img src="images/Power-backup-1.png" alt="Power Backup" class="amenity-icon"><h3 class="amenity-text">Power Backup</h3></article>
+            <article class="amenity"><img src="images/24-hr-CCTV-1.png" alt="24/7 CCTV Security" class="amenity-icon"><h3 class="amenity-text">24/7 CCTV Security</h3></article>
+            <article class="amenity"><img src="images/walking-1.png" alt="Walking Track" class="amenity-icon"><h3 class="amenity-text">Walking Track</h3></article>
+            <article class="amenity"><img src="images/Vastu-1.png" alt="Vastu Compliant" class="amenity-icon"><h3 class="amenity-text">Vastu Compliant</h3></article>
+            <article class="amenity"><img src="images/Swimming-Pool-1.png" alt="Swimming Pool" class="amenity-icon"><h3 class="amenity-text">Swimming Pool</h3></article>
+            <article class="amenity"><img src="images/Lift-1.png" alt="Lift with Backup" class="amenity-icon"><h3 class="amenity-text">Lift with Backup</h3></article>
+            <article class="amenity"><img src="images/24-hr-water-1.png" alt="24/7 Water Supply" class="amenity-icon"><h3 class="amenity-text">24/7 Water Supply</h3></article>
+          </div>
+        </div>
+
+        <div class="gallery-container">
+          <div class="gallery-grid">
+            <div class="gallery-column">
+              <img src="images/02.jpg" alt="Modern exterior view" class="gallery-image">
+              <img src="images/03.jpg" alt="Kitchen and dining areas" class="gallery-image">
+              <img src="images/18.jpg" alt="Interior common areas" class="gallery-image">
+            </div>
+            <div class="gallery-column">
+              <img src="images/07.jpg" alt="Contemporary interiors" class="gallery-image">
+              <img src="images/08.jpg" alt="Premium living room finishes" class="gallery-image">
+              <img src="images/15.jpg" alt="Parking facilities and infrastructure" class="gallery-image">
+            </div>
+            <div class="gallery-column">
+              <img src="images/06.jpg" alt="Community spaces & amenities" class="gallery-image">
+              <img src="images/04.jpg" alt="Aerial view of the complex" class="gallery-image">
+              <img src="images/09.jpg" alt="Landscaped gardens and walking paths" class="gallery-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floor Plans -->
+    <section id="floor-plans" class="section">
+      <div class="container">
+        <h2 class="section-title large">Floor Plans</h2>
+
+        <div class="text-center mb-3 d-flex flex-wrap justify-content-center gap-2">
+          <button class="btn btn-outline-warning plan-btn" data-bs-target="#floorPlansCarousel" data-bs-slide-to="0">Master Plan</button>
+          <button class="btn btn-outline-warning plan-btn" data-bs-target="#floorPlansCarousel" data-bs-slide-to="1">Block A</button>
+          <button class="btn btn-outline-warning plan-btn" data-bs-target="#floorPlansCarousel" data-bs-slide-to="2">Block B</button>
+          <button class="btn btn-outline-warning plan-btn" data-bs-target="#floorPlansCarousel" data-bs-slide-to="3">Block C</button>
+          <button class="btn btn-outline-warning plan-btn" data-bs-target="#floorPlansCarousel" data-bs-slide-to="4">Block D</button>
+          <button class="btn btn-outline-warning plan-btn" data-bs-target="#floorPlansCarousel" data-bs-slide-to="5">Block E</button>
+        </div>
+
+        <div id="floorPlansCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/MasterPlan.jpg" class="floor-plan-image" alt="Master Plan">
+              <div class="carousel-caption d-none d-md-block"><h5>Master Plan</h5></div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/BlockA-img(1).jpg" class="floor-plan-image" alt="Block A - 2BHK Layout">
+              <div class="carousel-caption d-none d-md-block"><h5>Block A</h5></div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/BlockB-img.jpg" class="floor-plan-image" alt="Block B - 2BHK Layout">
+              <div class="carousel-caption d-none d-md-block"><h5>Block B</h5></div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/BlockC-img.jpg" class="floor-plan-image" alt="Block C - Layout 1">
+              <div class="carousel-caption d-none d-md-block"><h5>Block C</h5></div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/BlockD-img(1).jpg" class="floor-plan-image" alt="Block D Layout">
+              <div class="carousel-caption d-none d-md-block"><h5>Block D</h5></div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/BlockE-img.jpg" class="floor-plan-image" alt="Block E Layout">
+              <div class="carousel-caption d-none d-md-block"><h5>Block E</h5></div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#floorPlansCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#floorPlansCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="section">
+      <h2 class="section-title large">Location</h2>
+      <div class="container">
+        <div class="location-content">
+          <div class="location-details">
+            <h3 class="location-title">Locations with Easy Access</h3>
+            <ul class="location-list">
+              <li><i class="fa fa-users" aria-hidden="true"></i><span>Super Markets inside Gated Community</span></li>
+              <li><i class="fa fa-tree" aria-hidden="true"></i><span>Nearby Parks &amp; Recreational Facilities</span></li>
+              <li><i class="fa fa-road" aria-hidden="true"></i><span>National Highway — 1 min</span></li>
+              <li><i class="fa fa-blind" aria-hidden="true"></i><span>ISKCON Temple — 1 min</span></li>
+              <li><i class="fa fa-university" aria-hidden="true"></i><span>Banks &amp; ATMs — 2 mins</span></li>
+              <li><i class="fa fa-globe" aria-hidden="true"></i><span>Top Schools &amp; Colleges — 4 mins</span></li>
+              <li><i class="fa fa-random" aria-hidden="true"></i><span>Bus Stand — 5 mins</span></li>
+              <li><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Narayana Engineering College — 6 mins</span></li>
+              <li><i class="fa fa-binoculars" aria-hidden="true"></i><span>IT &amp; Business Hubs — 6 mins</span></li>
+              <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Railway Station — 7 mins</span></li>
+              <li><i class="fa fa-hospital-o" aria-hidden="true"></i><span>Apollo Hospital — 8 mins</span></li>
+              <li><i class="fa fa-plane" aria-hidden="true"></i><span>Airport — 10 mins</span></li>
+            </ul>
+          </div>
+
+          <div class="map-container">
+            <iframe
+              class="map-iframe"
+              title="Google Map: Prakruthi Shangrila"
+              src="https://www.google.com/maps?ll=13.6159887,79.3849466&q=Prakruthi%20Shangrila&z=15&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Video -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title large">Gallery</h2>
+
+        <div class="about-video">
+          <video width="100%" height="auto" controls autoplay muted loop>
+            <source src="images/Prakruthi Shangrilla Video @ Tirupathi (2).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="about-content">
+          <p class="about-text"><strong>Prakruthi Shangrila</strong> is an exclusive residential project within a 6-acre gated community on the Tirupati–Bangalore highway, comprising 464 premium 2, 3, and 4 BHK homes with basement + ground parking and 8 floors.</p>
+          <p class="about-text">At Prakruthi Infra and Shelters, we build more than homes—we build communities where families thrive and brighter futures take shape.</p>
+          <button class="about-btn" id="openFormBtn" type="button">Download Brochure</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <img src="images/img_nz0ijwfobrm4lyb.png" alt="Prakruthi Shangrila Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-section-title">About</h3>
+          <a href="#about" class="footer-link">About Us</a>
+          <a href="#contact" class="footer-link">Contact Us</a>
+          <a href="#terms" class="footer-link">Terms &amp; Conditions</a>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-section-title">Highlights</h3>
+          <a href="#amenities" class="footer-link">Amenities</a>
+          <a href="#blocks" class="footer-link">Blocks</a>
+          <a href="#floor-plans" class="footer-link">Floor Plan</a>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-section-title">Contact Us</h3>
+          <div class="contact-item">
+            <i class="fa fa-map-marker"></i>
+            <span>SHANGRILA GATED COMMUNITY, Nalanda Nagar, Thumalagunta, Tirupati, Andhra Pradesh 517502</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-phone"></i>
+            <a class="footer-link" href="tel:+919010004039">+91-9010004039</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <a class="footer-link" href="mailto:shangrilatirupati@gmail.com">shangrilatirupati@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright text-muted">
+          <i class="fa fa-copyright" aria-hidden="true"></i>
+          <span class="ms-2">Copyright 2025 Shangrila Gated Communities</span>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp" style="color:#3dd422"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa fa-facebook-square" style="color:blue"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa fa-twitter-square" style="color:black"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa fa-youtube-play" style="color:red"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa fa-instagram" style="color:rgb(248,151,14)"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa fa-telegram" style="color:rgb(12,216,248)"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /* Mobile menu */
+    (function(){
+      const btn = document.querySelector('.menu-toggle');
+      const panel = document.getElementById('mobileMenu');
+      if(!btn || !panel) return;
+      btn.addEventListener('click', () => {
+        const open = panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        panel.hidden = !open;
+      });
+      panel.addEventListener('click', e => {
+        if(e.target.matches('a')){ panel.classList.remove('open'); panel.hidden = true; btn.setAttribute('aria-expanded','false'); }
+      });
+    })();
+
+    /* Brochure download */
+    (function(){
+      const FILE_URL = "images/Prakruthi Shangrila Mini Brochure Updated.pdf";
+      const FILE_NAME = "Prakruthi Shangrila Mini Brochure Updated.pdf";
+      const btn = document.getElementById("openFormBtn");
+      btn?.addEventListener("click", () => {
+        const a = document.createElement("a");
+        a.href = FILE_URL;
+        a.setAttribute("download", FILE_NAME); // may be ignored cross-origin
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      });
+    })();
+
+    /* Lightbox (blocks + amenities gallery + floor plans) */
+    (function(){
+      const lb = document.getElementById('lightbox');
+      const imgEl = document.getElementById('lightbox-img');
+      const caption = document.getElementById('caption');
+      const close = lb.querySelector('.close');
+      const selectors = [
+        '.gallery-image',
+        '.project-gallery .gallery-item img',
+        '#floorPlansCarousel .floor-plan-image'
+      ].join(',');
+
+      function pauseCarousel(pause){
+        const el = document.getElementById('floorPlansCarousel');
+        if(!window.bootstrap || !el) return;
+        const inst = bootstrap.Carousel.getInstance(el);
+        if(inst) pause ? inst.pause() : inst.cycle();
+      }
+
+      document.querySelectorAll(selectors).forEach(img => {
+        img.addEventListener('click', () => {
+          imgEl.src = img.dataset.full || img.src;
+          imgEl.alt = img.alt || "";
+          caption.textContent = img.alt || "";
+          lb.classList.add('open');
+          document.body.style.overflow = 'hidden';
+          pauseCarousel(true);
+        });
+      });
+
+      function closeLB(){
+        lb.classList.remove('open');
+        imgEl.src = ""; caption.textContent = "";
+        document.body.style.overflow = "";
+        pauseCarousel(false);
+      }
+      close.addEventListener('click', closeLB);
+      lb.addEventListener('click', e => { if(e.target === lb) closeLB(); });
+      document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLB(); });
+    })();
+  </script>
+</body>
+</html>
